@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "data_faktury": "2023-02-20",
+        "nr_faktury": "fv-23/2023",
+        "koszt_brutto": "54509.34"
+    },
+    {
+        "id": 2,
+        "data_faktury": "2023-09-09",
+        "nr_faktury": "fv-23/2023",
+        "koszt_brutto": "234.45"
+    },
+    {
+        "id": 3,
+        "data_faktury": "2023-02-23",
+        "nr_faktury": "fv-23.45",
+        "koszt_brutto": "200"
+    }
+]

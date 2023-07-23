@@ -19,26 +19,32 @@ if __name__ == "__main__":
 
         elif option == 2:
             print("Wprowadz dane nowej faktury")
-            invoice_data = (input("Data faktury: "))
+            invoice_data = input("Data faktury: ")
             nr_invoice = input("Nr faktury: ")
             cost = input("Kwota brutto: ")
-            print(invoice_data)
-            print(nr_invoice)
-            print(cost)
             input_date = []
-            input_date.append(input_date)
+            input_date.append(invoice_data)
             input_date.append(nr_invoice)
             input_date.append(cost)
-            print(input_date)
-
-            repo = RepositoryFunction()
-            post = repo.post(input_date, nr_invoice,cost)
+            decision = int(input("Czy chcesz zapisać dane do tabeli?"+"\n"+ "1 - Tak"+"\n"+"2 - Nie"+"\n"+"Twój wybór: "))
+            if decision == 1:
+                repo = RepositoryFunction()
+                post = repo.post(invoice_data, nr_invoice,cost)
+                print("\n"+"---- Zapisano do bazy ----"+"\n")
+                repo.get()
 
         elif option == 3:
             pass
 
         elif option == 4:
-            pass
+            repo = RepositoryFunction()
+            repo.get()
+
+            delete_invoice = int(input("Wprowadz id faktury aby ją usunąć: "))
+            print(f"Czy jesteś pewien, że chcesz usunąć fakture z id {delete_invoice}?")
+            decision = int(input("1- Tak"+"\n"+"2 - Nie"+"\n"+"Twój wybór: "))
+            if decision == 1:
+                repo.delete(delete_invoice)
 
         elif option == 5:
             repo = RepositoryFunction()
@@ -46,12 +52,3 @@ if __name__ == "__main__":
 
         else:
             print("Nie wybrano poprawnie opcji")
-
-
-
-
-
-
-
-
-
