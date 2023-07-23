@@ -2,6 +2,7 @@ from Repository.db_option import RepositoryFunction
 
 
 if __name__ == "__main__":
+    repo = RepositoryFunction()
     print("--------------------------------")
     print("Program Energia-ZZP WIiR KWP P-ń")
     print("--------------------------------")
@@ -14,22 +15,27 @@ if __name__ == "__main__":
         option = int(input("Wybież opbję: "))
 
         if option == 1:
-            repo = RepositoryFunction()
             get = repo.get()
 
         elif option == 2:
             print("Wprowadz dane nowej faktury")
-            invoice_data = input("Data faktury: ")
+
+            formatted_data = repo.validate_and_formated_date(input("Data faktury [dzień.miesiąć.rok]: "))
+
             nr_invoice = input("Nr faktury: ")
-            cost = input("Kwota brutto: ")
-            input_date = []
-            input_date.append(invoice_data)
-            input_date.append(nr_invoice)
-            input_date.append(cost)
+
+            # odbieranie inputu od uzytkownika
+            input_cost = input("Kwota brutto: ")
+            # zamiana , na .
+            formatted_cost = input_cost.replace(",", ".")
+            # żytowanie na typ float
+            float_cost = float(formatted_cost)
+            # zaokrąglanie do 2ch miejsc po przecinku
+            round_cost = round(float_cost, 2)
+
             decision = int(input("Czy chcesz zapisać dane do tabeli?"+"\n"+ "1 - Tak"+"\n"+"2 - Nie"+"\n"+"Twój wybór: "))
             if decision == 1:
-                repo = RepositoryFunction()
-                post = repo.post(invoice_data, nr_invoice,cost)
+                post = repo.post(formatted_data, nr_invoice, round_cost)
                 print("\n"+"---- Zapisano do bazy ----"+"\n")
                 repo.get()
 
@@ -37,9 +43,7 @@ if __name__ == "__main__":
             pass
 
         elif option == 4:
-            repo = RepositoryFunction()
             repo.get()
-
             delete_invoice = int(input("Wprowadz id faktury aby ją usunąć: "))
             print(f"Czy jesteś pewien, że chcesz usunąć fakture z id {delete_invoice}?")
             decision = int(input("1- Tak"+"\n"+"2 - Nie"+"\n"+"Twój wybór: "))
@@ -47,7 +51,6 @@ if __name__ == "__main__":
                 repo.delete(delete_invoice)
 
         elif option == 5:
-            repo = RepositoryFunction()
             repo.exit_program()
 
         else:

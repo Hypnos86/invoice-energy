@@ -1,20 +1,110 @@
 [
     {
         "id": 1,
-        "data_faktury": "2023-02-20",
-        "nr_faktury": "fv-23/2023",
-        "koszt_brutto": "54509.34"
+        "data_faktury": "2021-01-05",
+        "nr_faktury": "fv/01/2021",
+        "koszt_brutto": 1200.5
     },
     {
         "id": 2,
-        "data_faktury": "2023-09-09",
-        "nr_faktury": "fv-23/2023",
-        "koszt_brutto": "234.45"
+        "data_faktury": "2021-02-15",
+        "nr_faktury": "fv/02/2021",
+        "koszt_brutto": 750.2
     },
     {
         "id": 3,
-        "data_faktury": "2023-02-23",
-        "nr_faktury": "fv-23.45",
-        "koszt_brutto": "200"
+        "data_faktury": "2021-03-10",
+        "nr_faktury": "fv/03/2021",
+        "koszt_brutto": 3000.0
+    },
+    {
+        "id": 4,
+        "data_faktury": "2021-04-20",
+        "nr_faktury": "fv/04/2021",
+        "koszt_brutto": 550.0
+    },
+    {
+        "id": 5,
+        "data_faktury": "2021-05-07",
+        "nr_faktury": "fv/05/2021",
+        "koszt_brutto": 950.75
+    },
+    {
+        "id": 6,
+        "data_faktury": "2021-06-23",
+        "nr_faktury": "fv/06/2021",
+        "koszt_brutto": 2567.35
+    },
+    {
+        "id": 7,
+        "data_faktury": "2021-07-11",
+        "nr_faktury": "fv/07/2021",
+        "koszt_brutto": 1780.25
+    },
+    {
+        "id": 8,
+        "data_faktury": "2021-08-02",
+        "nr_faktury": "fv/08/2021",
+        "koszt_brutto": 310.6
+    },
+    {
+        "id": 9,
+        "data_faktury": "2021-09-14",
+        "nr_faktury": "fv/09/2021",
+        "koszt_brutto": 480.9
+    },
+    {
+        "id": 10,
+        "data_faktury": "2021-10-30",
+        "nr_faktury": "fv/10/2021",
+        "koszt_brutto": 720.8
+    },
+    {
+        "id": 11,
+        "data_faktury": "2021-11-09",
+        "nr_faktury": "fv/11/2021",
+        "koszt_brutto": 900.0
+    },
+    {
+        "id": 12,
+        "data_faktury": "2021-12-18",
+        "nr_faktury": "fv/12/2021",
+        "koszt_brutto": 1800.25
+    },
+    {
+        "id": 13,
+        "data_faktury": "2022-01-03",
+        "nr_faktury": "fv/01/2022",
+        "koszt_brutto": 1120.0
+    },
+    {
+        "id": 14,
+        "data_faktury": "2022-02-21",
+        "nr_faktury": "fv/02/2022",
+        "koszt_brutto": 250.5
+    },
+    {
+        "id": 15,
+        "data_faktury": "2022-03-15",
+        "nr_faktury": "fv/03/2022",
+        "koszt_brutto": 2900.7
+    },
+    {
+        "id": 16,
+        "data_faktury": "2022-04-10",
+        "nr_faktury": "fv/04/2022",
+        "koszt_brutto": 870.3
+    },
+    {
+        "id": 17,
+        "data_faktury": "2022-05-27",
+        "nr_faktury": "fv/05/2022",
+        "koszt_brutto": 1500.2
+    },
+    {
+        "id": 18,
+        "data_faktury": "2022-06-23",
+        "nr_faktury": "fv/06/2022",
+        "koszt_brutto": 3560.15
     }
 ]

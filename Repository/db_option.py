@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 
 class RepositoryFunction():
@@ -11,8 +12,11 @@ class RepositoryFunction():
             with open(self.file, "r") as file_open:
                 file = json.load(file_open)
                 print("| Identyfikator |"+"-"*10+"| Data faktury |"+"-"*10+"| Nr faktury |"+"-"*10+"| Wartość faktury |")
+                sum = 0
                 for invoice in file:
-                    print(invoice)
+                    print(invoice, end="\n")
+                    sum += invoice.get("koszt_brutto")
+                print(f"SUMA FAKTUR: {sum}")
                 print("\n")
         except FileNotFoundError:
             print("Plik JSON o podanej nazwie nie istnieje.")
@@ -90,3 +94,16 @@ class RepositoryFunction():
 
     def exit_program(self):
         exit()
+
+    def validate_and_formated_date(self, user_input):
+        try:
+            # Analiza wprowadzonej daty w formacie "dd.mm.yyyy"
+            input_date = datetime.strptime(user_input, "%d.%m.%Y")
+
+            formatted_date = input_date.strftime("%Y-%m-%d")
+            return formatted_date
+
+        except ValueError as ex:
+            return None
+        except Exception as ex:
+            print("Inny błąd:", ex)
